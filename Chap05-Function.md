@@ -1,5 +1,5 @@
 
-## 함수에 대한 설명들
+## Fuction (함수)
 
 ### 두개이상의 인자를 가지는 함수
 
@@ -39,7 +39,8 @@ func combineStr2 ( stringa stringa:String, stringb:String) -> String {
 combineStr2(stringa: "동일한", stringb: "파라미터사용했어요")
 
 ```
-### in-out 파라미터 사용하면 함수내에서 parameter 값을 직접 변경할 수 있다. return 값을 처리하는 일반적인 방식보다 편할 수 있다.(다만 in-out 키워드가 상용코드에 많이 쓰이는지는 확인한 적 없음)
+### in-out 파라미터 사용
+inout 키워드를 사용하면  parameter 로 받은 값을 함수내에서 직접 변경할 수 있다 ( 즉 외부값을 변경할 수 있다!). return 값을 처리하는 일반적인 방식보다 편할 수 있다.(다만 in-out 키워드가 상용코드에 많이 쓰이는지는 확인한 적 없음)
 
 ```swift
 func swapVal( inout a: Int , inout b:Int ){
