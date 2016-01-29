@@ -1,10 +1,9 @@
 
-### 함수에 대한 설명들
+## 함수에 대한 설명들
+
+### 두개이상의 인자를 가지는 함수
 
 ```swift
-
-// 두개이상의 인자를 가지는 함수
-
 func getAverage(X:Int...) -> Double {
     var total:Double = 0
     
@@ -15,13 +14,15 @@ func getAverage(X:Int...) -> Double {
     return (total / Double(X.count) )
 }
 
-getAverage(3,3,3,3) -> result: 3 ( 평균값이므로 )
-getAverage(0,10) -> result : 5 ( 평균값이므로 )
+getAverage(3,3,3,3) //결과: 3 ( 평균값이므로 )
+getAverage(0,10)    //결과: 5 ( 평균값이므로 )
 ```
 
 ### 내 외부 동일한 파라미터인자 사용하기
-// 이전에 쓰던 # 문법 이제 없어짐.
-// 참고: https://teamtreehouse.com/community/it-seems-that-swift-2-no-longer-uses-hash-shorthand-notation-for-external-names-of-parameters-of-functions
+
+ 이전에 쓰던 `# 문법`은 이제 없어짐.
+
+ 참고: https://teamtreehouse.com/community/it-seems-that-swift-2-no-longer-uses-hash-shorthand-notation-for-external-names-of-parameters-of-functions
 
 
 아래 문법은 더이상 사용하지 않는다.
@@ -38,7 +39,8 @@ func combineStr2 ( stringa stringa:String, stringb:String) -> String {
 combineStr2(stringa: "동일한", stringb: "파라미터사용했어요")
 
 ```
-// ### in-out 파라미터 사용하면  return 하는 것 보다 편함.
+### in-out 파라미터 사용하면 함수내에서 parameter 값을 직접 변경할 수 있다. return 값을 처리하는 일반적인 방식보다 편할 수 있다.(다만 in-out 키워드가 상용코드에 많이 쓰이는지는 확인한 적 없음)
+
 ```swift
 func swapVal( inout a: Int , inout b:Int ){
     let tmp = a
@@ -49,5 +51,5 @@ func swapVal( inout a: Int , inout b:Int ){
 var a = 10 , b = 3
 
 swapVal(&a, b: &b )
-print("a = \(a) , b = \(b)") //==> "a = 3 , b = 10\n"
+print("a = \(a) , b = \(b)")  // 결과: "a = 3 , b = 10\n"
 ```
